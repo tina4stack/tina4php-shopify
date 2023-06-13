@@ -1,0 +1,4 @@
+# This file stores configurations for your Shopify app.
+
+scopes = "write_orders,write_shipping,read_checkouts,write_checkouts,read_customers,write_customers"
+extension_directories = ["src/public/extensions/*"]

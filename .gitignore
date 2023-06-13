@@ -1,0 +1,9 @@
+/vendor/
+/.idea/
+/node_modules/
+/tina4php-shopify.iml
+/.env
+/sessions.db
+/favicon.ico
+/sessions.db-shm
+/sessions.db-wal

@@ -1,0 +1,11 @@
+type="frontend"
+
+port=7118
+
+auth_callback_path = ["/auth/callback"]
+
+webhooks_path = "/shopify/webhooks"
+
+[commands]
+dev = "composer start"
+build = "composer build"

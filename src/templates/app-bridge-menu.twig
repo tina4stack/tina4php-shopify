@@ -1,0 +1,30 @@
+<script>
+    const AppBridge = window['app-bridge'];
+    const config = {
+        apiKey: "{{ env.SHOPIFY_API_KEY }}",
+        host: new URLSearchParams(location.search).get("host"),
+        forceRedirect: true
+    };
+    const app = AppBridge.createApp(config);
+    const titleBarOptions = {
+        title: 'Example Title Bar',
+    };
+    const TitleBar = AppBridge.actions.TitleBar;
+    const myTitleBar = TitleBar.create(app, titleBarOptions);
+    const AppLink = AppBridge.actions.AppLink;
+    const NavigationMenu = AppBridge.actions.NavigationMenu;
+    const homeLink = AppLink.create(app, {
+        label: 'Home',
+        destination: '/',
+    });
+    const settingsLink = AppLink.create(app, {
+        label: 'Settings',
+        destination: '/settings',
+    });
+</script>
+<script>
+    const navigationMenu = NavigationMenu.create(app, {
+        items: [homeLink, settingsLink],
+        active: homeLink,
+    });
+</script>
