@@ -1,4 +1,9 @@
 <?php
+/**
+ * Tina4 - This is not a 4ramework.
+ * Copy-right 2007 - current Tina4
+ * License: MIT https://opensource.org/licenses/MIT
+ */
 
 \Tina4\Get::add ("/", function(\Tina4\Response $response, \Tina4\Request $request) {
     if (isset($request->server["HTTP_REFERER"]) && $request->server["HTTP_REFERER"] === "https://partners.shopify.com/") {

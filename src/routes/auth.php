@@ -1,4 +1,9 @@
 <?php
+/**
+ * Tina4 - This is not a 4ramework.
+ * Copy-right 2007 - current Tina4
+ * License: MIT https://opensource.org/licenses/MIT
+ */
 
 \Tina4\Get::add ("/login", function(\Tina4\Response $response, \Tina4\Request $request) {
     $url = \Shopify\Auth\OAuth::begin($request->params["shop"], "/auth/callback", "0", function(Shopify\Auth\OAuthCookie $cookie) use ($request) {
@@ -29,4 +34,3 @@
     //redirect here to store
     \Tina4\redirect("https://{$request->params["shop"]}");
 });
-

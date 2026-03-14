@@ -7,3 +7,6 @@
 /favicon.ico
 /sessions.db-shm
 /sessions.db-wal
+.phpunit.cache
+.claude/
+/metrics/
